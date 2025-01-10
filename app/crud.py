@@ -45,6 +45,11 @@ def delete_cat(db: Session, cat_id: int):
 
 
 def create_mission(db: Session, mission: MissionCreate):
+    if mission.cat_id:
+        db_cat = get_cat(db, mission.cat_id)
+        if db_cat is None:
+            return False
+
     db_mission = Mission(cat_id=mission.cat_id)
     db.add(db_mission)
     db.commit()
