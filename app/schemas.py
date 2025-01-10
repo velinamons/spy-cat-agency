@@ -25,8 +25,8 @@ class CatCreate(CatBase):
 
 
 class CatUpdate(BaseModel):
-    years_of_experience: int
-    salary: float
+    years_of_experience: int | None = None
+    salary: float | None = None
 
 
 class Cat(CatBase):
@@ -59,7 +59,7 @@ class Target(BaseModel):
 
 
 class MissionCreate(BaseModel):
-    cat_id: int | None
+    cat_id: int | None = None
     targets: List[TargetCreate] = Field(..., min_items=1, max_items=3)
 
 
