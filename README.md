@@ -1,4 +1,14 @@
  # Spy Cat Agency
+ 
+This API is designed to manage missions and targets for a spy agency. It allows administrators to complete missions and targets, update target statuses, and add or modify target notes, with restrictions for completed targets.
+
+## Tech Stack
+- **FastAPI**: Web framework for building API
+- **SQLAlchemy**: ORM for interacting with the SQLite
+- **Pydantic**: Data validation
+- **SQLite**: Database
+- **Alembic** (future work): For migrations
+- **Docker** (future work): For containerization of the app
 
 ## How to Start
 * Note: If you have both Python 2 and 3 installed, use `python3` instead of `python`. *
