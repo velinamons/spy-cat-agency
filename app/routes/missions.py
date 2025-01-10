@@ -37,6 +37,12 @@ def list_missions(skip: int = 0, limit: int = 10, db: Session = Depends(get_db))
 
 @router.delete("/{mission_id}")
 def delete_mission(mission_id: int, db: Session = Depends(get_db)):
+    if not crud.get_mission(db, mission_id):
+        raise HTTPException(
+            status_code=404,
+            detail="Mission not found"
+        )
+
     if not crud.delete_mission(db, mission_id):
         raise HTTPException(
             status_code=400,
