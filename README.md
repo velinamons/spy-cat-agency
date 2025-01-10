@@ -7,13 +7,12 @@
    ```bash
    git clone https://github.com/velinamons/spy-cat-agency.git
 
-   
 2. Activate venv:
 * Windows:
   ```bash
    python -m venv venv
    source venv/Scripts/activate
-   
+  
 3. Unix-based (macOS, Linux):
    ```bash
    python3 -m venv venv
