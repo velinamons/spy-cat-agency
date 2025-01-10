@@ -18,7 +18,7 @@ class Mission(Base):
     __tablename__ = "mission"
     id = Column(Integer, primary_key=True, index=True)
     complete = Column(Boolean, default=False)
-    cat_id = Column(Integer, ForeignKey("cat.id"), nullable=False)
+    cat_id = Column(Integer, ForeignKey("cat.id"), nullable=True)
 
     cat = relationship("Cat", back_populates="mission")
 
